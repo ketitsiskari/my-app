@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
+  const titleElement = React.createElement(
+    'h1',
+    { style: { color: '#999', fontSize: '19px' } },
+    'Solar system planets'
+  );
+
+  const planetsList = (
+    <ul className="planets-list">
+      <li>Mercury</li>
+      <li>Venus</li>
+      <li>Earth</li>
+      <li>Mars</li>
+      <li>Jupiter</li>
+      <li>Saturn</li>
+      <li>Uranus</li>
+      <li>Neptune</li>
+    </ul>
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {titleElement}
+      {planetsList}
     </div>
   );
 }
